@@ -241,8 +241,22 @@ Header styling
 ===============*/
 .header {
   display: flex;
+  justify-content: space-around;
+  
+  padding: 10px 5px;
+  align-items: center;
+}
+
+.logo {
   text-transform: uppercase;
-  padding: 8px;
+}
+
+/*============
+Navbar styling
+===============*/
+nav a {
+  text-decoration: none;
+  padding: 0 15px;
 }
 
 /*============
