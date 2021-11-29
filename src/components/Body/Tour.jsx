@@ -5,7 +5,8 @@ const Tour = () => {
     return (
         <div className="body">
             <div className="title">
-                Our Tours
+                <h2>Our Tours</h2>
+                <hr className="underline"/>
             </div>
             <Tourcard />
         </div>

@@ -2,9 +2,7 @@ import React from 'react';
 
 const Button = () => {
     return (
-        <div className="btn">
-            <button>Not Interested</button>
-        </div>
+        <button className="delete-btn">Not Interested</button>
     );
 }
  
