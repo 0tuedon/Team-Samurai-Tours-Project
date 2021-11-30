@@ -21,7 +21,7 @@ const Tourcard = (props) => {
 
             </div>
             <div className="not-interested">
-                <button>Not Interested</button>
+                <button onClick = {() =>props.deleteTour(props.Data.id)}>Not Interested</button>
             </div>
         </div>
     )

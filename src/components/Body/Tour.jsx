@@ -22,7 +22,12 @@ const Tour = () => {
 
         fetchData();
 
-    }, [toursData]);
+    }, []);
+    
+    const deleteTour =(id) => {
+        const newTours = toursData.filter((tour) => tour.id !== id)
+        settoursData(newTours)
+    }
 
     return (
         <div className="tour-body">
@@ -32,6 +37,7 @@ const Tour = () => {
                     toursData.map((data) => {
                         return (
                             <Tourcard
+                            deleteTour = {deleteTour}
                                 Data={data}
                             />
                         )
