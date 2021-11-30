@@ -1,6 +1,6 @@
 import React from 'react';
 const Tourcard = (props) => {
-    console.log(props.Data)    
+    
     return (
         <div className="tour-container">
             <div className="img-container">
@@ -18,7 +18,6 @@ const Tourcard = (props) => {
                 <p className="text">{props.Data.info}
                     <button className='see-more'>See More</button>
                 </p>
-
             </div>
             <div className="not-interested">
                 <button onClick = {() =>props.deleteTour(props.Data.id)}>Not Interested</button>
@@ -26,4 +25,4 @@ const Tourcard = (props) => {
         </div>
     )
 }
-export default Tourcard
+export default Tourcard;
