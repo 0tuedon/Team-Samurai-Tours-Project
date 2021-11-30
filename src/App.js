@@ -1,12 +1,12 @@
 import './App.css';
-import Tour from './components/Body/Tour';
+import TourCard from './components/Body/Tourcard';
 import Header from './components/Header/Header';
 
 function App() {
   return (
     <main className="App">
       <Header />
-      <Tour />
+      <Tourcard />
     </main>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Tourcard = (props) => {
     
     return (
@@ -25,7 +24,6 @@ const Tourcard = (props) => {
                 <button>Not Interested</button>
             </div>
         </div>
-    );
+    )
 }
- 
-export default Tourcard;
+export default Tourcard
