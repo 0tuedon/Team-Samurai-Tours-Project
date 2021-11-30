@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Tour.css'
 const Tour = () => {
+    const[toursData, settoursData] = useState([])
     return (
         <div className="tour-container">
             <div className="img-container">
