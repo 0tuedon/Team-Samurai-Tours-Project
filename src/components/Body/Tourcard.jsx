@@ -1,6 +1,6 @@
 import React from 'react';
 const Tourcard = (props) => {
-    
+    console.log(props.Data)    
     return (
         <div className="tour-container">
             <div className="img-container">

@@ -4,9 +4,9 @@ import Tourcard from './Tourcard';
 
 const Tour = () => {
     const [toursData, settoursData] = useState([]);
-
+    console.log(toursData)
     useEffect(() => {
-        const url = "../../store/Tours.json";
+        const url = "https://course-api.com/react-tours-project";
         
         const fetchData = async () => {
             try {
@@ -22,7 +22,7 @@ const Tour = () => {
 
         fetchData();
 
-    }, []);
+    }, [toursData]);
 
     return (
         <div className="tour-body">
