@@ -1,23 +1,28 @@
 import React from 'react';
-import Button from '../ui/Button';
 
-const Tourcard = () => {
+const Tourcard = (props) => {
+    
     return (
-        <div className="vienna">
-            <div className="image-display">
-                
+        <div className="tour-container">
+            <div className="img-container">
+                <img src={props.Data.image}
+                alt="" />
             </div>
-            <div className="tour-details">
-                <div className="top-title">
-                    <h3>Best of Title</h3>
-                    <span className="price">Amount</span>
+            <div className="tour-header">
+                <div className="tour-header-text">
+                    <h4>{props.Data.name}</h4>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vitae error vero ullam. Explicabo ab earum, mollitia saepe ullam eveniet, minima voluptatibus ducimus modi fugiat expedita eligendi officiis, nihil quas?
+
+                <div className="price">${props.Data.price}</div>
+            </div>
+            <div className="tour-description">
+                <p className="text">{props.Data.info}
+                    <button className='see-more'>See More</button>
                 </p>
-                <div className="bttn">
-                    <Button />
-                </div>
+
+            </div>
+            <div className="not-interested">
+                <button>Not Interested</button>
             </div>
         </div>
     );

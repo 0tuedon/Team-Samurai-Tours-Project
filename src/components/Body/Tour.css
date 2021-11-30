@@ -2,6 +2,17 @@
 {
     background-color:hsl(4, 5%, 82%);
     border-radius: var(--radius);
+
+    margin: 2rem 0;
+}
+
+.tour-body h2 {
+  text-align: center;
+}
+
+.tour-body {
+    margin: 12px auto;
+    width: 60vw;
 }
 
 .img-container img
