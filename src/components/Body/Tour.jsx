@@ -1,15 +1,29 @@
-import React from 'react';
-import Tourcard from './Tourcard';
-
+import React from 'react'
+import './Tour.css'
 const Tour = () => {
     return (
-        <div className="body">
-            <div className="title">
-                Our Tours
+        <div className="tour-container">
+            <div className="img-container">
+                <img src="https://dl.airtable.com/.attachments/a0cd0702c443f31526267f38ea5314a1/2447eb7a/paris.jpg" alt = ""/>
+            </div>            
+            <div className="tour-header">
+                <div className="tour-header-text">
+                    <h4> Best of paris in 7 days Tour </h4>
+                </div>
+               
+                <div className="price"> $1,302</div>
             </div>
-            <Tourcard />
+            <div className="tour-description">
+                <p className="text">Rick Steves' Best of Ireland tour kicks off with the best of Dublin, followed by Ireland's must-see historical sites, charming towns, music-filled pubs, and seaside getaways — including Kinsale, the Dingle Peninsula, the Cliffs of Moher, the Aran Islands, Galway, Connemara, Giant's Causeway, and the compelling city of Belfast. All along the way, Rick's guides will share their stories to draw you in to the Emerald Isle, and the friendliness of the people will surely steal your heart. Join us for the Best of Ireland in 14 Days!
+                <button className='see-more'>See More</button>
+                </p>
+                
+            </div>
+            <div className="not-interested">
+                <button>Not Interested</button>
+            </div>
         </div>
-    );
+    )
 }
- 
-export default Tour;
+
+export default Tour

@@ -1,0 +1,73 @@
+.tour-container 
+{
+    background-color:hsl(4, 5%, 82%);
+    border-radius: var(--radius);
+}
+
+.img-container img
+{
+    width: 100%;
+    object-fit: cover;
+  height: 20rem;
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+
+.tour-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.tour-header-text
+{
+    padding: 0.25rem 1rem;
+}
+.see-more
+{
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    color: var(--clr-primary-5);
+    font-size: 1rem;
+    cursor: pointer;
+    padding-left: 0.25rem;
+    display: inline-block;
+}
+.price
+{
+    justify-self: flex-end;
+    color: var(--clr-primary-5);
+    background: var(--clr-primary-10);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius);
+    margin-right: 0.5rem;
+}
+
+.tour-description
+{
+    padding: 0.25rem 1rem;
+}
+.tour-description .text
+{
+    padding: 0.25rem 0.2rem;
+    text-align: justify;
+}
+
+.not-interested
+{
+    padding-bottom: 1.5rem;
+}
+.not-interested  button
+{
+    display: block;
+    width: 200px;
+    margin: 1rem auto 0 auto;
+    color: var(--clr-red-dark);
+    letter-spacing: var(--spacing);
+    background: transparent;
+    border: 1px solid var(--clr-red-dark);
+    padding: 0.5rem 0.5rem;
+    border-radius: var(--radius);
+}
