@@ -6,7 +6,7 @@ const Tour = () => {
     const [toursData, settoursData] = useState([]);
 
     useEffect(() => {
-        const url = "https://course-api.com/react-tours-project";
+        const url = "../../store/Tours.json";
         
         const fetchData = async () => {
             try {
