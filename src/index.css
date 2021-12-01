@@ -182,14 +182,16 @@ Header styling
   display: flex;
   justify-content: space-around;
   
-  padding: 10px 5px;
+  padding: 5px;
   align-items: center;
 
   width: 100%;
 }
 
-.logo {
-  text-transform: uppercase;
+.logo img {
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
 }
 
 /*============
@@ -197,8 +199,15 @@ Navbar styling
 ===============*/
 nav a {
   text-decoration: none;
-  padding: 0 15px;
+  padding: 5px 15px;
   color: black;
+  margin: 5px;
+}
+
+nav a:hover {
+  background: var(--clr-grey-2);
+  border-radius: 10px;
+  color: var(--clr-grey-10);
 }
 
 /*============
