@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 const Tourcard = ({ Data, deleteTour}) => {
+
+    const [readMore, setReadMore] = useState(false)
     
     return (
         <div className="tour-container">
@@ -15,8 +18,11 @@ const Tourcard = ({ Data, deleteTour}) => {
                 <div className="price">${Data.price}</div>
             </div>
             <div className="tour-description">
-                <p className="text">{Data.info}
-                    <button className='see-more'>See More</button>
+                <p className="text">
+                    {readMore ? Data.info : `${Data.info.substring(0, 200)}...`}
+                    <button onClick={()=>setReadMore(!readMore)} className='see-more'>
+                        {readMore ? "Show Less" : "Read More"}
+                    </button>
                 </p>
 
             </div>
