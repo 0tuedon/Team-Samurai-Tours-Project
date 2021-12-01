@@ -12,16 +12,23 @@
 
 .tour-body {
     margin: 12px auto;
-    width: 60vw;
+    width: 50vw;
+}
+
+@media screen and (max-width:500px ) {
+    .tour-body {
+        margin: 12px auto;
+        width: 83vw;
+    }
 }
 
 .img-container img
 {
     width: 100%;
     object-fit: cover;
-  height: 20rem;
-  border-top-right-radius: var(--radius);
-  border-top-left-radius: var(--radius);
+    height: 20rem;
+    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
 }
 
 .tour-header
