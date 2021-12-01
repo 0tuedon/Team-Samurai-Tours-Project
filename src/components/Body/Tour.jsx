@@ -47,6 +47,7 @@ const Tour = () => {
     return (loading ? (toursData.length === 0 ? <h1 className="no-tour">No Tour Saved 😥</h1> :
         <div className="tour-body">
             <h2>Our Tours</h2>
+            <div className="horizontal"></div>
             <div className="tour-holder">
                 {
                     toursData.map((data) => {
