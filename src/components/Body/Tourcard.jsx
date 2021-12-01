@@ -26,4 +26,4 @@ const Tourcard = ({ Data, deleteTour}) => {
         </div>
     )
 }
-export default Tourcard
+export default Tourcard;

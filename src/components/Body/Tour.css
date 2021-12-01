@@ -20,7 +20,14 @@
     width: 50vw;
 }
 
-@media screen and (max-width:500px ) {
+@media screen and (max-width:768px ) {
+    .tour-body {
+        margin: 12px auto;
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width:600px ) {
     .tour-body {
         margin: 12px auto;
         width: 83vw;
