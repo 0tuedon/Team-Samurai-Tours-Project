@@ -6,6 +6,11 @@
     margin: 2rem 0;
 }
 
+.no-tour{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
 .tour-body h2 {
   text-align: center;
 }
