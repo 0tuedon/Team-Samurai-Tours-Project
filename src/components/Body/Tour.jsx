@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
-import PropTypes from 'prop-types';
 
 import './Tour.css';
 const Tour = () => {
@@ -66,10 +65,6 @@ const Tour = () => {
       </div>
     );
   }
-};
-
-Tour.propTypes = {
-  loading: PropTypes.bool,
 };
 
 export default Tour;
