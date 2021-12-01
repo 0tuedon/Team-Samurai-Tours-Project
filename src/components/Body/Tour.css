@@ -60,7 +60,7 @@
     border-color: transparent;
     text-transform: capitalize;
     color: var(--clr-primary-5);
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     padding-left: 0.25rem;
     display: inline-block;
