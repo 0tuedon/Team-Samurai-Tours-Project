@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Tourcard = ({ Data, deleteTour}) => {
 
-    const [showMore, setShowMore] = useState(false)
+    const [readMore, setReadMore] = useState(false)
     
     return (
         <div className="tour-container">
@@ -19,9 +19,9 @@ const Tourcard = ({ Data, deleteTour}) => {
             </div>
             <div className="tour-description">
                 <p className="text">
-                    {showMore ? Data.info : `${Data.info.substring(0, 200)}...`}
-                    <button onClick={()=>setShowMore(!showMore)} className='see-more'>
-                        {showMore ? "Show Less" : "Show More"}
+                    {readMore ? Data.info : `${Data.info.substring(0, 200)}...`}
+                    <button onClick={()=>setReadMore(!readMore)} className='see-more'>
+                        {readMore ? "Show Less" : "Read More"}
                     </button>
                 </p>
 
