@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 const Tourcard = ({ Data, deleteTour}) => {
 
-    const [showMore, setShowMore] = useState(false)
+    const [readMore, setReadMore] = useState(false)
+    const [isFade,setIsFade] =useState(false)
     
     return (
-        <div className="tour-container">
+        <div className={!isFade?"tour-container":"tour-container-delete"}>
             <div className="img-container">
                 <img src={Data.image}
-                alt="" />
+                alt="Team Samurai" />
             </div>
             <div className="tour-header">
                 <div className="tour-header-text">
@@ -19,17 +20,19 @@ const Tourcard = ({ Data, deleteTour}) => {
             </div>
             <div className="tour-description">
                 <p className="text">
-                    {showMore ? Data.info : `${Data.info.substring(0, 200)}...`}
-                    <button onClick={()=>setShowMore(!showMore)} className='see-more'>
-                        {showMore ? "Show Less" : "Show More"}
+                    {readMore ? Data.info : `${Data.info.substring(0, 200)}...`}
+                    <button onClick={()=>setReadMore(!readMore)} className='see-more'>
+                        {readMore ? "Show Less" : "Show More"}
                     </button>
                 </p>
 
             </div>
             <div style={{cursor:"pointer"}} className="not-interested">
-                <button onClick={()=>deleteTour(Data.name)}>Not Interested</button>
+                <button onClick={()=>{
+                setIsFade(true)
+                deleteTour(Data.name)}}>Not Interested</button>
             </div>
         </div>
     )
 }
-export default Tourcard
+export default Tourcard;

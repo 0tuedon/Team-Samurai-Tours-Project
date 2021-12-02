@@ -1,15 +1,16 @@
 import React from 'react';
+import logo from '../logo.jpg';
 
 const Header = () => {
     return (
         <div className="header">
             <div className="logo">
-                Samurai
+                <img src={logo} alt="team logo" srcSet=""/>
             </div>
             <nav>
                 <a href="/">Home</a>
-                <a href="http://">About</a>
-                <a href="http://">Contact</a>
+                <a href="/">About</a>
+                <a href="/">Contact</a>
             </nav>
         </div>
     );
