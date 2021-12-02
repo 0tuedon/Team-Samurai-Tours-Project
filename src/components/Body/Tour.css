@@ -2,26 +2,64 @@
 {
     background-color:hsl(4, 5%, 82%);
     border-radius: var(--radius);
-
     margin: 2rem 0;
+   
+}
+.tour-container-delete 
+{
+    animation: fadeout 1s linear forwards;
 }
 
+@keyframes fadeout {
+    0% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 0;
+    }
+ }
+
+.tour-holder-delete
+{
+    animation: fadeout .3s linear forwards;
+}
+
+.no-tour{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+}
 .tour-body h2 {
   text-align: center;
 }
 
 .tour-body {
     margin: 12px auto;
-    width: 60vw;
+    width: 50vw;
+    transition: all 1s ease-out;
+}
+
+@media screen and (max-width:768px ) {
+    .tour-body {
+        margin: 12px auto;
+        width: 65vw;
+    }
+}
+
+@media screen and (max-width:600px ) {
+    .tour-body {
+        margin: 12px auto;
+        width: 83vw;
+    }
 }
 
 .img-container img
 {
     width: 100%;
     object-fit: cover;
-  height: 20rem;
-  border-top-right-radius: var(--radius);
-  border-top-left-radius: var(--radius);
+    height: 20rem;
+    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
 }
 
 .tour-header
@@ -41,7 +79,7 @@
     border-color: transparent;
     text-transform: capitalize;
     color: var(--clr-primary-5);
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
     padding-left: 0.25rem;
     display: inline-block;
@@ -70,6 +108,7 @@
 {
     padding-bottom: 1.5rem;
 }
+
 .not-interested  button
 {
     display: block;
@@ -81,4 +120,14 @@
     border: 1px solid var(--clr-red-dark);
     padding: 0.5rem 0.5rem;
     border-radius: var(--radius);
+    transition: background-color ease-in-out 0.3s;
+}
+.not-interested  button:hover
+{
+    background-color:var(--clr-primary-10);
+}
+
+.not-interested button:active
+{
+    background-color: var(--clr-primary-9);
 }

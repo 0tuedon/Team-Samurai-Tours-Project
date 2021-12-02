@@ -1,26 +1,36 @@
-import React from 'react';
-const Tourcard = (props) => {
+import React, { useState } from 'react';
+
+const Tourcard = ({ Data, deleteTour}) => {
+
+    const [readMore, setReadMore] = useState(false)
+    const [isFade,setIsFade] =useState(false)
     
     return (
-        <div className="tour-container">
+        <div className={!isFade?"tour-container":"tour-container-delete"}>
             <div className="img-container">
-                <img src={props.Data.image}
-                alt="" />
+                <img src={Data.image}
+                alt="Team Samurai" />
             </div>
             <div className="tour-header">
                 <div className="tour-header-text">
-                    <h4>{props.Data.name}</h4>
+                    <h4>{Data.name}</h4>
                 </div>
 
-                <div className="price">${props.Data.price}</div>
+                <div className="price">${Data.price}</div>
             </div>
             <div className="tour-description">
-                <p className="text">{props.Data.info}
-                    <button className='see-more'>See More</button>
+                <p className="text">
+                    {readMore ? Data.info : `${Data.info.substring(0, 200)}...`}
+                    <button onClick={()=>setReadMore(!readMore)} className='see-more'>
+                        {readMore ? "Show Less" : "Show More"}
+                    </button>
                 </p>
+
             </div>
-            <div className="not-interested">
-                <button onClick = {() =>props.deleteTour(props.Data.id)}>Not Interested</button>
+            <div style={{cursor:"pointer"}} className="not-interested">
+                <button onClick={()=>{
+                setIsFade(true)
+                deleteTour(Data.name)}}>Not Interested</button>
             </div>
         </div>
     )
