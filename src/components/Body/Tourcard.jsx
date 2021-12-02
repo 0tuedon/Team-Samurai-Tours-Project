@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 const Tourcard = ({ Data, deleteTour}) => {
 
     const [readMore, setReadMore] = useState(false)
+    const [isFade,setIsFade] =useState(false)
     
     return (
-        <div className="tour-container">
+        <div className={!isFade?"tour-container":"tour-container-delete"}>
             <div className="img-container">
                 <img src={Data.image}
-                alt="" />
+                alt="Team Samurai" />
             </div>
             <div className="tour-header">
                 <div className="tour-header-text">
@@ -21,13 +22,15 @@ const Tourcard = ({ Data, deleteTour}) => {
                 <p className="text">
                     {readMore ? Data.info : `${Data.info.substring(0, 200)}...`}
                     <button onClick={()=>setReadMore(!readMore)} className='see-more'>
-                        {readMore ? "Show Less" : "Read More"}
+                        {readMore ? "Show Less" : "Show More"}
                     </button>
                 </p>
 
             </div>
             <div style={{cursor:"pointer"}} className="not-interested">
-                <button onClick={()=>deleteTour(Data.name)}>Not Interested</button>
+                <button onClick={()=>{
+                setIsFade(true)
+                deleteTour(Data.name)}}>Not Interested</button>
             </div>
         </div>
     )

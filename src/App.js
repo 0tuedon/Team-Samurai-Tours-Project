@@ -1,13 +1,17 @@
 import './App.css';
 import Tour from './components/Body/Tour'
 import Header from './components/Header/Header';
+import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
 function App() {
   return (
-    <main className="App">
+    <ErrorBoundary>
+        <main className="App">
       <Header />
       <Tour />
     </main>
+    </ErrorBoundary>
+  
   );
 }
 

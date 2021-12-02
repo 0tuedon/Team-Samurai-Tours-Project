@@ -184,8 +184,7 @@ Header styling
   
   padding: 5px;
   align-items: center;
-
-  width: 100%;
+  width: 100vw;
 }
 
 .logo img {
