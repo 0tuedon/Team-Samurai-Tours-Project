@@ -1,12 +1,12 @@
+# WEEK 5 React Capstone Project
+This is team samurai's week 5 Capstone projct which is implementing the picture below as using reactjs 
+
+
 # Clone this git repo:
-git clone git@github.com:0tuedon/Team-Samurai-Tours-Project.git
+git clone  https://github.com/0tuedon/Team-Samurai-Tours-Project.git
+
+# Get in the directory of the project
+cd Team-Samurai-Tours-Project
 
 
-cd /
 
-# The apps are linked to as git submodules.
-# This will take some time... (see comment below for possible speedup)
-git submodule update --init
-
-# OR if you've got git 2.9+ installed try to run updates in parallel:
-# git submodule update --init --jobs 4
