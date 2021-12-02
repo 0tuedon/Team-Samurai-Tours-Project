@@ -18,12 +18,11 @@ const Tourcard = (props) => {
                 <p className="text">{props.Data.info}
                     <button className='see-more'>See More</button>
                 </p>
-
             </div>
             <div className="not-interested">
-                <button>Not Interested</button>
+                <button onClick = {() =>props.deleteTour(props.Data.id)}>Not Interested</button>
             </div>
         </div>
     )
 }
-export default Tourcard
+export default Tourcard;

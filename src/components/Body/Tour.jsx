@@ -4,10 +4,18 @@ import Tourcard from './Tourcard';
 
 const Tour = () => {
     const [toursData, settoursData] = useState([]);
-
+    console.log(toursData)
+    const deleteTour  = (id)=>
+    {
+        settoursData(
+            toursData.filter((data)=>{
+            return data.id !== id
+        }))
+        
+    }
     useEffect(() => {
         const url = "https://course-api.com/react-tours-project";
-        
+       
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
@@ -23,6 +31,11 @@ const Tour = () => {
         fetchData();
 
     }, []);
+    
+    // const deleteTour =(id) => {
+    //     const newTours = toursData.filter((tour) => tour.id !== id)
+    //     settoursData(newTours)
+    // }
 
     return (
         <div className="tour-body">
@@ -32,6 +45,7 @@ const Tour = () => {
                     toursData.map((data) => {
                         return (
                             <Tourcard
+                            deleteTour = {deleteTour}
                                 Data={data}
                             />
                         )
