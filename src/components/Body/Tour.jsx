@@ -61,6 +61,7 @@ const Tour = () => {
     ) : (
       <div className='tour-body'>
         <h2>Our Tours</h2>
+        <div className="line"></div>
         <div className='tour-holder'>
           {toursData.map((data) => {
             return (
