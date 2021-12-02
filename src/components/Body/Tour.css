@@ -36,6 +36,15 @@
   text-align: center;
 }
 
+.line{
+    width: 6rem;
+    height: 0.25rem;
+    background: #49a6e9;
+    background: var(--clr-primary-5);
+    margin: 0px auto
+}
+
+
 .tour-body {
   margin: 12px auto;
   width: 50vw;
