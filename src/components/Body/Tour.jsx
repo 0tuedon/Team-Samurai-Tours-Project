@@ -4,33 +4,35 @@ import Tourcard from './Tourcard';
 
 const Tour = () => {
     const [toursData, setToursData] = useState([]);
-    console.log(toursData);
-
     const [loading, setLoading] = useState(false);
-
     const deleteTour = (name) => {
+        
         const newToursData = toursData.filter((tour) => tour.name !== name)
-        setToursData(newToursData)
-        // settoursData(
-        //     toursData.filter((data)=>{
-        //     return data.id !== id
-        // }))
-
+        setTimeout(setToursData(newToursData),2000)
     }
+
     useEffect(() => {
         const url = "https://course-api.com/react-tours-project";
 
         const fetchData = async () => {
             try {
+                setLoading(true);
                 const response = await fetch(url);
+                if(response.ok)
+                {
+                    console.log('fefe')
                 const json = await response.json();
                 setToursData(json);
                 console.log(json);
+                setLoading(false)
+                }
 
-                setLoading(true);
-
-            } catch (error) {
-                console.log("error", error)
+            } catch (error){
+               
+                setLoading(false)
+            }
+            finally {
+                setLoading(false)
             }
         };
 
@@ -38,13 +40,8 @@ const Tour = () => {
 
     }, []);
 
-    // const deleteTour =(id) => {
-    //     const newTours = toursData.filter((tour) => tour.id !== id)
-    //     settoursData(newTours)
-    // }
 
-
-    return (loading ? (toursData.length === 0 ? <h1 className="no-tour">No Tour Saved 😥</h1> :
+    return (!loading ? (toursData.length === 0 ? <h1 className="no-tour">No Tour Saved 😥</h1> :
         <div className="tour-body">
             <h2>Our Tours</h2>
             <div className="tour-holder">
@@ -52,6 +49,7 @@ const Tour = () => {
                     toursData.map((data) => {
                         return (
                             <Tourcard
+                                key={data.id}
                                 deleteTour={deleteTour}
                                 Data={data}
                             />
@@ -65,4 +63,4 @@ const Tour = () => {
 
 }
 
-export default Tour
+export default Tour;
