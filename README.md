@@ -4,9 +4,19 @@ so we use the likes of useeffect in our project. The following motion will show 
 
 # How To Set It Up On Your Local Machine
 
-Clone this git repo: git clone  https://github.com/0tuedon/Team-Samurai-Tours-Project.git
+Clone this git repo:  ***git clone  https://github.com/0tuedon/Team-Samurai-Tours-Project.git***
 
-Get in the directory of the project: cd Team-Samurai-Tours-Project
+Get in the directory of the project:  ***cd Team-Samurai-Tours-Project***
+
+open in an editing tool(Vscode recommended)
+
+use the following command in your **CLI** to run your code:  ***npm Start***
+
+after that their will be a link in display after it starts running which is    http://localhost:3000/(This link will work if the project is properly setup in your computer and run at the default react port)
+
+You can also test and find our live link here -> https://react-projects-2-tours.netlify.app/
+
+
 
 
 
