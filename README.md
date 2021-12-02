@@ -20,5 +20,15 @@ You can also test and find our live link here -> https://team-samurai-tours-proj
 
 
 
-
+# Names and Intern id of Particpants/Contributors
+Tuoyo Tuedon                SH-IT-0040051
+Joshua Ejembi               SH-IT-0010952
+Temitope adenekan           SH-IT-0015620
+Elvis Kivunangoma           SH-IT-0097611
+Adeneye Adijat Motunrayo    SH-IT-03285
+Orevaoghene Precious Ukah   SH-IT-0033917
+Ajele Oluwadamilare         SH-IT-00420
+Abiy Wondimu Hailemariam    SH-IT-0079396
+Patrick Akhamiogu           SH-IT-0024706
+Juliet Afolayan             SH-IT-0051338
 
