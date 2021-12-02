@@ -20,9 +20,9 @@
   animation: fadeout 0.3s linear forwards;
 }
 
-.no-tour {
+.no-tour  {
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   margin-top: 20px;
 }
 .tour-body h2 {
@@ -82,7 +82,7 @@
   border-color: transparent;
   text-transform: capitalize;
   color: var(--clr-primary-5);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   cursor: pointer;
   padding-left: 0.25rem;
   display: inline-block;

@@ -201,6 +201,7 @@ nav a {
   padding: 5px 15px;
   color: black;
   margin: 5px;
+  transition: all .3s ease-in;
 }
 
 nav a:hover {

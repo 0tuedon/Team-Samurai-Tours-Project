@@ -21,10 +21,8 @@ const Tour = () => {
         setLoading(true);
         const response = await fetch(url);
         if (response.ok) {
-          console.log('fefe');
           const json = await response.json();
           setToursData(json);
-          console.log(json);
           setLoading(false);
         }
       } catch (error) {
@@ -44,7 +42,7 @@ const Tour = () => {
   return !loading ? (
     toursData.length === 0 ? (
       <div className='no-tour'>
-        <h1>No More Tours Remaining 😢</h1>
+        <h2>No More Tours Remaining 😢</h2>
         <button
           style={{
             background: '#008bff',
