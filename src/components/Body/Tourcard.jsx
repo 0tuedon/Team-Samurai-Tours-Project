@@ -22,7 +22,7 @@ const Tourcard = ({ Data, deleteTour}) => {
                 <p className="text">
                     {readMore ? Data.info : `${Data.info.substring(0, 200)}...`}
                     <button onClick={()=>setReadMore(!readMore)} className='see-more'>
-                        {readMore ? "Show Less" : "Show More"}
+                        {readMore ? "Read Less" : "Read More"}
                     </button>
                 </p>
 
